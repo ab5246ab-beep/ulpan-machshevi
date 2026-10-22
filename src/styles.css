@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import "@fontsource/heebo/400.css";
+@import "@fontsource/heebo/500.css";
+@import "@fontsource/heebo/600.css";
+@import "@fontsource/heebo/700.css";
+
+@theme {
+  --font-sans: "Heebo", "Avenir Next", sans-serif;
+  --color-bg: #070a08;
+  --color-surface: #101612;
+  --color-raised: #17201a;
+  --color-fg: #e8f0ea;
+  --color-muted: #8d9c92;
+  --color-primary: #3ddc84;
+  --color-primary-fg: #06210f;
+  --color-line: #24302a;
+  --color-danger: #e07a72;
+}
+
+@layer base {
+  html {
+    direction: rtl;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
